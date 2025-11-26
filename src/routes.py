@@ -1,10 +1,10 @@
-from main import app
-from flask import render_template
+from flask import Blueprint, render_template
+routes_bp = Blueprint('routes_bp', __name__)
 
-@app.route('/')
+@routes_bp.route('/')
 def homepage():
     return render_template('index.html')
 
-@app.route('/teste')
+@routes_bp.route('/teste')
 def teste():
     return 'TESTE'
