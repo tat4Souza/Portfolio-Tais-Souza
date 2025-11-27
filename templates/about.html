@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section class="intro">
+    <div class="intro__container">
+        <div class="intro__left-container">
+            {% with class='stars stars--1' %}
+                {% include 'components/star.html' %}
+            {% endwith %}
+            {% with class='stars stars--2' %}
+                {% include 'components/star.html' %}
+            {% endwith %}
+            {% with class='stars stars--3' %}
+                {% include 'components/star.html' %}
+            {% endwith %}
+            <div class="intro__header">
+                <h2>Port<span>folio</span> </h2>
+                <div class="intro__texts">  
+                    <span class="intro__informal">olá, eu sou</span>
+                    <h1 class="name">taís souza</h1>
+                </div>
+            </div>
+            <p>Estudante de ADS com aspiração para <b>desenvolvimento FrontEnd</b>. Atualmente, venho estudando frameworks diversas e aprimorando minhas habilidades com UI/UX design.</p>
+        </div>
+        <div class="intro__right-container">
+            <div class="contacts__container">
+                <div class="contacts__item">
+                    <i class='bxl  bx-github'></i> 
+                    <a href="https://github.com/tat4Souza" target="#">tat4Souza</a>
+                    
+                </div>
+                <div class="contacts__item">
+                    <i class='bxl  bx-linkedin'></i>  
+                    <a href="https://www.linkedin.com/in/tais-f-souza/" target="#">tais-f-souza</a>
+                </div>
+                <div class="contacts__item">
+                    <i class='bxl  bx-gmail'></i>
+                    <a href="mailto:tata.ssouz47@gmail.com">tais.fernandes.ssouza@gmail.com</a>    
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+        const contactItems = document.querySelectorAll('.contacts__item');
+
+        contactItems.forEach(item => {
+            const span = item.querySelector('a')
+
+            const showInfo = gsap.to(span, {duration:0.5, autoAlpha: 1, x:0, maxWidth: '30rem', paddingRight: '1rem', paused: true, ease: 'power2.out'})
+
+            item.addEventListener('mouseenter', () => {
+                showInfo.play(); 
+                console.log('play');
+             });
+
+            item.addEventListener('mouseleave', () => {
+                showInfo.reverse(); 
+                console.log('out');
+
+            });
+        })
+
+        
+    })
+
+
+
+</script>
+{% endblock %}

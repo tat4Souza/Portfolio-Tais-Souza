@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //10px
+}
+
+body {
+    background-color: $body-color;
+    font-family: $cabin;
+    font-size: $font-size-default;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 85%;
+    margin: 0 auto;
+}

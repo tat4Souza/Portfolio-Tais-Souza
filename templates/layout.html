@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Taís Fernandes de Souza</title>
+    <link href='https://cdn.boxicons.com/3.0.5/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a class="button--nav {% if request.path == '/' %}active {% endif %}" href="{{url_for('about')}}">Sobre</a></li>
+                <li><a class="button--nav {% if request.path == '/projects' %}active {% endif %}" href="{{url_for('projects')}}">Projetos</a></li>
+                <li><a class="button--nav {% if request.path == '/education' %}active {% endif %}" href="{{url_for('education')}}">Formação</a></li>
+            </ul>
+        </nav>
+        <h2>Taís Souza</h2>
+    </header>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
