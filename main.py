@@ -1,9 +1,11 @@
 from flask import Flask, render_template
+from data import data_array
+
 app = Flask(__name__)
 
 @app.route('/')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', data = data_array)
 
 @app.route('/projects')
 def projects():

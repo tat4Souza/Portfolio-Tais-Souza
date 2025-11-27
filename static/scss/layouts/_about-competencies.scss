@@ -1,0 +1,54 @@
+.competencies {
+    height: 40vh;
+    display: flex;
+    align-items: flex-start;
+
+
+    &__content-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+
+        & h4 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-family: $bebasNeue;
+            font-weight: 400;
+            color: $primary-color;
+        }
+    }
+
+    &__divider {
+        height: auto;
+        width: 1px;
+        background-color: $surface-300;
+        display: block;
+    }
+
+    &__labels-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 30rem;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__pill {
+        display: block;
+        padding: 1rem 2rem;
+        border: 1px solid $surface-300;
+        text-align: center;
+        border-radius: 10rem;
+        font-size: 2rem;
+        color: $surface-300;
+    }
+
+}
