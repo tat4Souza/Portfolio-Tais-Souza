@@ -1,0 +1,92 @@
+.wrapper {
+    background-color: $surface-0;
+    border-top-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+    margin-top: 3rem;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+    padding: 5rem;
+    width: 80%;
+    margin: 0 auto;
+
+    &>h2 {
+        font-size: 4rem;
+        font-family: $poppins;
+        color: $secondary-color;
+    }
+
+    &__courses {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__course {
+        border: 1px solid $surface-50;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        padding: 3rem;
+        height: 20rem;
+        border-radius: 3rem;
+
+        & svg {
+            width: 6rem;
+            color: $surface-300;
+        }
+    }
+
+    &__header {
+        width: 40%;
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        & h4 {
+            font-size: 3.8rem;
+            font-family: $bebasNeue;
+            font-weight: 400;
+            color: $surface-300;
+        }
+
+        & span {
+            font-size: 1.6rem;
+            color: $surface-200;
+        }
+    }
+
+    &__content {
+        width: 40%;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        color: $surface-200;
+
+        & span {
+            font-size: 1.6rem;
+        }
+
+    }
+}
+
+.certificates {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem;
+
+    & h2 {
+        font-size: 4rem;
+        color: $secondary-color;
+        font-family: $poppins;
+    }
+
+}

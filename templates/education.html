@@ -1,5 +1,30 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1>Formação</h1>
+
+<div class="wrapper">
+    <section class="education">
+        <h2>Formação Acadêmica</h2>
+        <div class="education__courses">
+            {% for course in data %}
+                <div class="education__course">
+                    {% include "components/star-circle.html" %}
+                    <div class="education__header">
+                        <span>{{course.place}}</span>
+                        <h4>{{course.title}}</h4>
+                    </div>
+                    <div class="education__content">
+                        <p>{{course.desc}}</p>
+                        <span>{{course.period_start}} - {{course.period_end}}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="certificates">
+        <h2>Certificados</h2>
+    </section>
+
+</div>
 {% endblock %}

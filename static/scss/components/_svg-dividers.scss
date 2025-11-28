@@ -154,12 +154,8 @@
 
 
 @keyframes scroll {
-    0% {
-        transform: translate(0);
-    }
-
-    100% {
-        transform: translate(-50%);
+    to {
+        transform: translate(calc(-50% - 40px));
     }
 
 }
