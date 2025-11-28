@@ -79,6 +79,7 @@
         left: 65%;
         width: 30%;
         background-image: linear-gradient(to bottom, #A273AF, rgba(0, 0, 0, 0));
+        overflow: hidden;
         top: 0;
         height: 90vh;
         z-index: 0;
@@ -86,6 +87,20 @@
         border-bottom-right-radius: 100rem;
 
         display: flex;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url(../images/tata-port.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: drop-shadow(8px 8px 10px #0000008b);
+        }
     }
 
     &__texts {
@@ -144,6 +159,7 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        z-index: 10;
     }
 
     &__item {
