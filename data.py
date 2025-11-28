@@ -106,3 +106,84 @@ certificates_array = [
         "link": "https://hub.saga.com.br/certificado?chave=29CDCC8F"
     }
 ]
+
+projects_array = [
+    {
+        "title": "DevLOOP - API",
+        "status": "Concluído",
+        "period_start": "Ago. 2025", 
+        "period_end": "Nov. 2025", 
+        "type": "Acadêmico",
+        "image": "images/devloop-thumbnail.png",
+        "desc": "O DevLOOP expõe de forma didática o funcionamento da metodologia SCRUM, formulários que permitem os membros de equipe DEV a relatar suas atividades, e relatórios para o gerenciamento e administração pelo responsável da equipe.",
+        "link": "",
+        "repository": "https://github.com/PigeonsCode/Equipe-PigeonCode.git"
+    },
+
+    {
+        "title": "Interlink (TCC 3º ano)",
+        "status": "Concluído",
+        "period_start": "Fev. 2024", 
+        "period_end": "Dez. 2024", 
+        "type": "Acadêmico",
+        "image": "images/interlink-thumbnail.jpeg",
+        "desc": "O Interlink é um website que, em sua proposta, auxilia na organização de processos seletivos em empresas e contribui na busca por vagas e na escolha de candidatos, funcionando de maneira semelhante a uma rede social.",
+        "link": "",
+        "repository": "#"
+    },
+    {
+        "title": "Storia",
+        "status": "Em Progresso",
+        "period_start": "Ago. 2025", 
+        "period_end": "Progresso", 
+        "type": "Pessoal",
+        "image": "images/storia-thumbnail.png",
+        "desc": "O objetivo do projeto é a criação de um site em que usuários poderão se cadastrar e ter acesso a uma ferramenta que facilite na organização de suas histórias e mundos fictícios.",
+        "link": "",
+        "repository": "https://github.com/tat4Souza/Storia.git"
+    },
+    {
+        "title": "Tatazzo Portfolio",
+        "status": "Concluído",
+        "period_start": "Mar. 2025", 
+        "period_end": "Jun. 2025", 
+        "type": "Pessoal",
+        "image": "images/tatazzo-thumbnail.png",
+        "desc": "Esse projeto foi um estudo para poder colocar em prática o que vi no curso da Udemy e poder assim, fixar melhor o conteúdo na cabeça, fazendo um design montado do zero. ",
+        "link": "",
+        "repository": "https://github.com/tat4Souza/sass-training.git"
+    },
+    {
+        "title": "Browser Extension",
+        "status": "Concluído",
+        "period_start": "Ago. 2025", 
+        "period_end": "Ago. 2025", 
+        "type": "Treino",
+        "image": "images/browser-extension-thumbnail.png",
+        "desc": "O projeto tem como objetivo o desenvolvimento de uma UI que permita a administração das extensões de navegador que estão ativas e inativas, possibilitando, também, a remoção de qualquer uma delas.",
+        "link": "",
+        "repository": "https://github.com/tat4Souza/Browser-extension-manager-UI_FrontEndMentor.git"
+    },
+    {
+        "title": "Time Tracking",
+        "status": "Concluído",
+        "period_start": "Fev. 2025", 
+        "period_end": "Fev. 2025", 
+        "type": "Treino",
+        "image": "images/time-thumbnail.png",
+        "desc": "O objetivo do projeto é a prática do uso de CSS Grid e a amostragem das informações dinamicamente e a partir de um array de dados passados aos componentes.",
+        "link": "",
+        "repository": "#"
+    },
+    {
+        "title": "Contact Form",
+        "status": "Concluído",
+        "period_start": "Ago. 2025", 
+        "period_end": "Set. 2025", 
+        "type": "Treino",
+        "image": "images/contactUs-thumbnail.png",
+        "desc": "O objetivo do projeto é a criação de um formulário funcional, acessível e responsivo, com validação de campos, mensagens de erros e confirmação visual de seu envio.",
+        "link": "",
+        "repository": "https://github.com/tat4Souza/Contact-Us_FrontEndMentor.git"
+    }
+]

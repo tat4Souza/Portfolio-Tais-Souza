@@ -1,4 +1,4 @@
-.projects {
+.projects-intro {
     width: 80%;
     margin: 0 auto;
     margin-top: 10rem;
@@ -12,19 +12,152 @@
         }
 
         & h2 {
-            width: 35%;
+            width: 36%;
             font-size: 4rem;
             font-weight: 400;
             font-family: $poppins;
             color: $surface-200;
         }
 
-
-
         & p {
             width: 50%;
             font-size: 2rem;
             color: $surface-300;
         }
+    }
+}
+
+.projects {
+    height: 100vh;
+    margin-left: 15rem;
+    display: flex;
+    align-items: center;
+
+    & .swiper {
+        width: 100%;
+        height: 80%;
+    }
+
+    &__card {
+        height: 100%;
+        background-color: $surface-0;
+        border-radius: 2rem;
+        overflow: hidden;
+        border: 1px solid $surface-50;
+        user-select: none;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+    }
+
+    &__image-container {
+        height: 35rem;
+        object-fit: cover;
+        overflow: hidden;
+        border-bottom: 1px solid $surface-50;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        padding: 2.4rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $surface-50;
+        padding-bottom: 2rem;
+    }
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        & h4 {
+            font-size: 2.4rem;
+            color: $surface-400;
+        }
+
+        & label {
+            padding: 0.8rem 1.6rem;
+            border-radius: 10rem;
+            border: 1px solid $surface-300;
+            font-size: 1.3rem;
+            align-self: flex-start;
+            color: $surface-300;
+        }
+    }
+
+    &__dates {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        justify-content: space-around;
+        color: $surface-100;
+        font-size: 1.6rem;
+    }
+
+    & p {
+        font-size: 1.6rem;
+        color: $surface-100;
+    }
+
+    & i {
+        color: $surface-400;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+    &__footer {
+        border-top: 1px solid $surface-100;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+    }
+
+    &__button {
+        width: 100%;
+        padding: 1.6rem 2.4rem;
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+        background-color: $surface-300;
+        color: $surface-0;
+        font-family: $poppins;
+        cursor: pointer;
+        transition: 0.3s all ease;
+        text-decoration: none;
+
+        font-size: 1.4rem;
+        text-align: center;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        &--outline {
+            background-color: transparent;
+            border: 1px solid $surface-300;
+            color: $surface-300;
+        }
+    }
+
+
+    & .swiper-pagination-bullet-active {
+        background-color: $surface-400;
     }
 }

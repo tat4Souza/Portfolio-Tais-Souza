@@ -1,11 +1,83 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<section class="projects">
-    <div class="projects__header">
+<section class="projects-intro">
+    <div class="projects-intro__header">
         <h2><b>Dev FrontEnd,</b> Projetos Acadêmicos, Pessoais e de Treino.</h2>
         <p>Com estudos focados em design e desenvolvimento frontend, tenho praticado React.js, Sass, TypeScript, Next.js entre outras ferramentas comumente utilizadas na área. Essa página é dedicada para a exibição do resultado destes estudos.</p>
     </div>
-
 </section>
+
+<section class="projects">
+    <div class="swiper">
+        <div class="projects__cards swiper-wrapper">
+            {% for project in projects %}
+                <div class="projects__card swiper-slide">
+                    <div class="projects__content">
+                        <div class="projects__image-container">
+                            <img src="{{url_for('static', filename=project.image)}}" alt="imagem">
+                        </div>
+
+                        <div class="projects__content-wrapper">
+                            <div class="projects__header">
+                                <div class="projects__texts">
+                                    <h4>{{project.title}}</h4>
+                                    <label>{{project.status}}</label>
+                                </div>
+                                <div class="projects__dates">
+                                    <span>{{project.period_start}}</span>
+                                    <span>{{project.period_end}}</span>
+                                </div>
+                            </div>
+                            <p>{{project.desc}}</p>
+                            <i>Projeto {{project.type}}</i>
+                            <div class="projects__footer">
+                                {% if project.link != "" %}
+                                    <a href="{{project.link}}" target="#" class="projects__button--outline projects__button">Acessar o site</a>
+                                {% endif %}
+                                <a href="{{project.repository}}" target="#" class="projects__button">Abrir Repositório <i class='bx  bx-arrow-up-right-stroke'></i> </a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="swiper-slide">
+            </div>
+            
+        </div>
+        
+        <div class="swiper-pagination"></div> 
+        
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".swiper", {
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+        slidesPerView: 1,
+        spaceBetween: 18,
+        },
+        768: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+        },
+        1188: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        },
+    },
+    });
+</script>
 {% endblock %}

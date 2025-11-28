@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from data import data_array, courses_array, certificates_array
+from data import data_array, courses_array, certificates_array, projects_array
 
 app = Flask(__name__)
 
@@ -7,11 +7,11 @@ app = Flask(__name__)
 def about():
     return render_template('about.html', data = data_array)
 
-@app.route('/projects')
+@app.route('/projetos')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html', projects = projects_array)
 
-@app.route('/education')
+@app.route('/formacao')
 def education():
     return render_template('education.html', data = courses_array, certificates = certificates_array)
 
