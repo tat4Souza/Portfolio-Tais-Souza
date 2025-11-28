@@ -463,11 +463,100 @@ body {
   width: 80%;
   margin: 0 auto;
   padding: 5rem;
+  flex-direction: column;
+  gap: 4.5rem;
 }
 .certificates h2 {
   font-size: 4rem;
   color: #A347BA;
   font-family: "Poppins", sans-serif;
+}
+.certificates__container {
+  width: 90%;
+  margin: 0 auto;
+  align-self: center;
+  display: flex;
+  height: 70vh;
+}
+.certificates__card {
+  border: 1px solid #C3C5D9;
+  width: 50%;
+  border-radius: 2rem;
+  text-decoration: none;
+  user-select: none;
+  max-height: 90%;
+}
+.certificates__card-image-container {
+  height: 22rem;
+  width: 22rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid #A7AAC0;
+}
+.certificates__card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.certificates__card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+.certificates__card-header {
+  color: #3C3C40;
+}
+.certificates__card-header h4 {
+  font-size: 3.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  padding-top: 2rem;
+}
+.certificates__card-header label {
+  padding: 0.8rem 1.6rem;
+  border: 1px solid currentColor;
+  width: auto;
+  border-radius: 10rem;
+  font-size: 1.6rem;
+}
+.certificates__card-desc {
+  border-top: 1px solid #C3C5D9;
+}
+.certificates__card-desc > p {
+  padding: 2rem 1.5rem;
+  color: #A7AAC0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #A347BA;
+}
+
+.projects {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.projects__header {
+  display: flex;
+  justify-content: space-between;
+}
+.projects__header b {
+  color: #26272A;
+}
+.projects__header h2 {
+  width: 35%;
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #808390;
+}
+.projects__header p {
+  width: 50%;
+  font-size: 2rem;
+  color: #3C3C40;
 }
 
 /*# sourceMappingURL=main.css.map */

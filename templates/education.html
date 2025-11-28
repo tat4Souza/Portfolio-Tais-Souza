@@ -24,7 +24,61 @@
 
     <section class="certificates">
         <h2>Certificados</h2>
+
+        <div class=" certificates__container swiper">
+            <div class="certificates__content  swiper-wrapper">
+                {% for certificate in certificates %}
+                    <a href="{{certificate.link}}" target="#" class="certificates__card swiper-slide">
+                        <div class="certificates__card-content">
+                            <div class="certificates__card-image-container">
+                                <img class="certificates__card-image" src="{{url_for('static', filename=certificate.image)}}" alt="imagem do certificado">
+                            </div>
+                            <div class="certificates__card-header">
+                                <label>{{certificate.place}}</label>
+                                <h4>{{certificate.title}}</h4>
+                            </div>
+
+                            <div class="certificates__card-desc"><p>{{certificate.desc}}</p></div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            
+            <div class="swiper-pagination"></div>
+
+            
+        </div>
     </section>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".swiper", {
+    loop: true,
+    grabCursor: true,
+    autoplay: {
+        delay: 4000, 
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+        slidesPerView: 1,
+        spaceBetween: 18,
+        },
+        768: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+        },
+        1188: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        },
+    },
+    });
+</script>
 {% endblock %}

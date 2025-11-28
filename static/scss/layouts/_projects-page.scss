@@ -1,0 +1,30 @@
+.projects {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        & b {
+            color: $surface-400;
+        }
+
+        & h2 {
+            width: 35%;
+            font-size: 4rem;
+            font-weight: 400;
+            font-family: $poppins;
+            color: $surface-200;
+        }
+
+
+
+        & p {
+            width: 50%;
+            font-size: 2rem;
+            color: $surface-300;
+        }
+    }
+}
