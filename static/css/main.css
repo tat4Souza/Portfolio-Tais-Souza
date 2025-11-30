@@ -74,17 +74,14 @@ body {
   border-bottom-right-radius: 100rem;
   display: flex;
 }
-.intro__right-container::before {
-  content: "";
+.intro__right-container img {
   position: absolute;
-  top: 0;
+  top: 7%;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: url(../images/tata-port.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.5450980392));
 }
 .intro__texts {
@@ -186,6 +183,7 @@ body {
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  margin-top: -2px;
 }
 
 .custom-shape-divider-top-1764256245 svg {
@@ -200,15 +198,16 @@ body {
 
 .custom-shape-divider-bottom-1764256323 {
   width: 100%;
-  overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
 }
 
 .custom-shape-divider-bottom-1764256323 svg {
+  position: relative;
   display: block;
   width: calc(300% + 1.3px);
   height: 354px;
+  bottom: 2px;
 }
 
 .custom-shape-divider-bottom-1764256323 .shape-fill {
@@ -216,10 +215,10 @@ body {
 }
 
 .skills {
-  display: flex;
   flex-direction: column;
   background-color: #462546;
   position: relative;
+  border-top: 2px solid #FCF2FF;
   display: flex;
   justify-content: space-between;
 }

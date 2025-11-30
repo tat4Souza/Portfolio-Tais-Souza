@@ -24,6 +24,7 @@
             <p>Estudante de ADS com aspiração para <b>desenvolvimento FrontEnd</b>. Atualmente, venho estudando frameworks diversas e aprimorando minhas habilidades com UI/UX design.</p>
         </div>
         <div class="intro__right-container">
+            <img src="../static/images/tata-port.png" alt="">
             <div class="contacts__container">
                 <div class="contacts__item">
                     <i class='bxl  bx-github'></i> 
@@ -178,29 +179,8 @@
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', ()=> {
-        const contactItems = document.querySelectorAll('.contacts__item');
+{% endblock %}
 
-        contactItems.forEach(item => {
-            const span = item.querySelector('a')
-
-            const showInfo = gsap.to(span, {duration:0.5, autoAlpha: 1, x:0, maxWidth: '30rem', paddingRight: '1rem', paused: true, ease: 'power2.out'})
-
-            item.addEventListener('mouseenter', () => {
-                showInfo.play(); 
-                console.log('play');
-             });
-
-            item.addEventListener('mouseleave', () => {
-                showInfo.reverse(); 
-                console.log('out');
-
-            });
-        })
-    })
-
-
-
-</script>
+{% block scripts %}
+    <script src="../static/js/about-animation.js"></script>
 {% endblock %}

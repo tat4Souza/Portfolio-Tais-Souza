@@ -60,17 +60,14 @@
 
         display: flex;
 
-        &::before {
-            content: "";
+        & img {
             position: absolute;
-            top: 0;
+            top: 7%;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 1;
-            background-image: url(../images/tata-port.png);
-            background-size: cover;
-            background-repeat: no-repeat;
+            object-fit: cover;
             filter: drop-shadow(8px 8px 10px #0000008b);
         }
     }
