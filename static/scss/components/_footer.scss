@@ -1,0 +1,18 @@
+footer {
+    padding: 4rem 0;
+    margin: 0 auto;
+    border-top: 1px solid $surface-50;
+
+    & a {
+        text-decoration: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        color: $surface-400;
+    }
+
+    & span {
+        color: $secondary-color;
+    }
+
+}

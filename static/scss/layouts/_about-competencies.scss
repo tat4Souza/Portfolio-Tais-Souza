@@ -1,5 +1,5 @@
 .competencies {
-    height: 40vh;
+    height: 50vh;
     display: flex;
     align-items: flex-start;
 
@@ -26,12 +26,12 @@
         }
     }
 
-    &__divider {
-        height: auto;
-        width: 1px;
-        background-color: $surface-300;
-        display: block;
-    }
+    // &__divider {
+    //     height: auto;
+    //     width: 1px;
+    //     background-color: $surface-300;
+    //     display: block;
+    // }
 
     &__labels-container {
         display: flex;
@@ -49,6 +49,14 @@
         border-radius: 10rem;
         font-size: 2rem;
         color: $surface-300;
+        cursor: pointer;
+        transition: 0.2s all ease;
+
+
+        &:hover {
+            transform: scale(1.04);
+        }
+
     }
 
 }

@@ -62,12 +62,12 @@
             {% endwith %}
         </div>
 
-        <div class="skills__content">
+        <div class="skills__content ">
             <div class="skills__header">
-                <h4>COMPETÊNCIAS</h4>
-                <h5>Softwares</h5>
+                <h4 class="skills-animation">COMPETÊNCIAS</h4>
+                <h5 class="skills-animation">Softwares</h5>
             </div>
-            <div class="skills__softwares-container">
+            <div class="skills__softwares-container skills-animation--2">
                 <div class="skills__softwares-track">
                     <figure class="skills__softwares">
                         <img src="{{url_for('static', filename='images/blender-logo.svg')}}" alt="logo do Blender">
@@ -150,14 +150,13 @@
 
 <section class="competencies">
     <div class="competencies__content-wrapper">
-        <div class="competencies__column">
+        <div class="competencies__column competencies-animation">
             <h4>Idiomas</h4>
             <label class="competencies__pill">{{data.skills.idiom}}</label>
         </div>
 
-        <span class="competencies__divider"></span>
 
-        <div class="competencies__column">
+        <div class="competencies__column competencies-animation">
             <h4>Linguagens</h4>
             <div class="competencies__labels-container">
                 {% for lang in data.skills.languages %}
@@ -166,9 +165,8 @@
             </div>
         </div>
 
-        <span class="competencies__divider"></span>
 
-        <div class="competencies__column">
+        <div class="competencies__column competencies-animation">
             <h4>Frameworks</h4>
             <div class="competencies__labels-container">
                 {% for frame in data.skills.frameworks %}

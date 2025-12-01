@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper-certificates", {
     loop: true,
     grabCursor: true,
     autoplay: {
@@ -49,7 +49,7 @@ var swiper = new Swiper(".swiper", {
 });
 
 
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper-projects", {
     loop: true,
     grabCursor: true,
     pagination: {

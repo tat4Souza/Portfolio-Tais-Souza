@@ -2,9 +2,12 @@
 
 {% block content %}
 
-<div class="wrapper">
+<div class="box"></div>
+
+
     <section class="education">
         <h2>Formação Acadêmica</h2>
+
         <div class="education__courses">
             {% for course in data %}
                 <div class="education__course">
@@ -21,11 +24,11 @@
             {% endfor %}
         </div>
     </section>
-
+<div class="wrapper">
     <section class="certificates">
         <h2>Certificados</h2>
 
-        <div class=" certificates__container swiper">
+        <div class=" certificates__container swiper swiper-certificates">
             <div class="certificates__content  swiper-wrapper">
                 {% for certificate in certificates %}
                     <a href="{{certificate.link}}" target="#" class="certificates__card swiper-slide">
@@ -47,7 +50,11 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
 </div>
 
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{url_for('static', filename='/js/education-animation.js')}}"></script>
 {% endblock %}

@@ -1,8 +1,11 @@
 .wrapper {
-    background-color: $surface-0;
+
     border-top-left-radius: 8rem;
     border-top-right-radius: 8rem;
     margin-top: 3rem;
+    background-color: $surface-0;
+
+
 }
 
 .education {
@@ -13,6 +16,7 @@
     padding: 5rem;
     width: 80%;
     margin: 0 auto;
+    // background-color: $surface-0;
 
     &>h2 {
         font-size: 4rem;
@@ -27,17 +31,56 @@
     }
 
     &__course {
-        border: 1px solid $surface-50;
         display: flex;
         align-items: stretch;
         justify-content: space-evenly;
         padding: 3rem;
+        margin: 0 auto;
+        width: 100%;
         height: 20rem;
         border-radius: 3rem;
+        background-color: $surface-0;
+        position: relative;
+        border: 1px solid $surface-50;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            inset: -0.2rem;
+            background: transparent;
+            z-index: -1;
+            border-radius: 3.2rem;
+        }
+
+        &:hover {
+            transform: scale(1.005);
+
+            &::before,
+            &::after {
+                background-image: radial-gradient(circle at var(--x-local) var(--y-local),
+                        $surface-400 50%,
+                        rgba(255, 100, 100, 0.0) 50%);
+                background-attachment: initial;
+                mix-blend-mode: color-dodge;
+            }
+
+            // &::after {
+            //     background-image: radial-gradient(circle at var(--x-local) var(--y-local),
+            //             $accent-color 0%,
+            //             rgba(255, 100, 100, 0.0) 50%);
+            //     filter: blur(5px);
+            // }
+
+        }
 
         & svg {
             width: 6rem;
             color: $surface-300;
+
         }
     }
 
@@ -168,4 +211,13 @@
 
 .swiper-pagination-bullet-active {
     background-color: $secondary-color;
+}
+
+.footer--white {
+    background-color: $surface-0;
+}
+
+.no-hover {
+    pointer-events: none;
+    /* Impede que o cursor interaja com o elemento */
 }
