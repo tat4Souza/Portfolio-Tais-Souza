@@ -33,39 +33,30 @@ gsap.fromTo('.education h2',
 );
 
 
-
-gsap.set('.education__course', { className: 'education__course no-hover' });
-
 gsap.timeline({ defaults: { duration: 0.5 } })
     .from('.education__course', {
         opacity: 0,
-        left: -80,
-        stagger: 0.2,
+        left: -100,
+        stagger: 0.1,
         ease: 'power2.out',
-
-        onComplete: function () {
-            this.targets()[0].classList.remove('no-hover');
-            this.targets()[1].classList.remove('no-hover');
-            this.targets()[2].classList.remove('no-hover');
-
-        }
     });
 
 
 const boxes = gsap.utils.toArray('.education__course');
 boxes.forEach(box => {
+    gsap.set(box, { opacity: 1, left: 0 });
+
     gsap.to(box, {
         left: -50,
-        immediateRender: false,
         opacity: 0,
         ease: 'power2.out',
+
         scrollTrigger: {
             trigger: box,
             start: 'bottom 50%',
             end: 'bottom',
             scrub: true,
-
         }
-    })
+    });
 });
 

@@ -509,11 +509,12 @@ footer span {
   font-family: "Poppins", sans-serif;
 }
 .certificates__container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   align-self: center;
   display: flex;
-  height: 70vh;
+  min-height: 70vh;
+  padding-inline: 2rem;
 }
 .certificates__card {
   border: 1px solid #C3C5D9;
@@ -522,6 +523,10 @@ footer span {
   text-decoration: none;
   user-select: none;
   max-height: 90%;
+  transition: all 0.2s ease;
+}
+.certificates__card:hover {
+  border-color: #26272A;
 }
 .certificates__card-image-container {
   height: 22rem;

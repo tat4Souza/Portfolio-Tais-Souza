@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 var swiper = new Swiper(".swiper-certificates", {
     loop: true,
+    spaceBetween: 30,
     grabCursor: true,
     autoplay: {
         delay: 4000,
@@ -31,19 +32,17 @@ var swiper = new Swiper(".swiper-certificates", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        dynamicBullets: true,
     },
     breakpoints: {
         640: {
             slidesPerView: 1,
-            spaceBetween: 18,
         },
         768: {
             slidesPerView: 2,
-            spaceBetween: 18,
         },
-        1188: {
+        1200: {
             slidesPerView: 3,
-            spaceBetween: 24,
         },
     },
 });

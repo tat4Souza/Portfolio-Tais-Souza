@@ -136,11 +136,12 @@
     }
 
     &__container {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         align-self: center;
         display: flex;
-        height: 70vh;
+        min-height: 70vh;
+        padding-inline: 2rem;
     }
 
     &__card {
@@ -150,6 +151,11 @@
         text-decoration: none;
         user-select: none;
         max-height: 90%;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: $surface-400;
+        }
     }
 
     &__card-image-container {
