@@ -140,8 +140,10 @@
         margin: 0 auto;
         align-self: center;
         display: flex;
+        align-items: center;
         min-height: 70vh;
         padding-inline: 2rem;
+        padding-bottom: 4rem;
     }
 
     &__card {

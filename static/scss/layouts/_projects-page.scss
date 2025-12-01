@@ -35,7 +35,11 @@
 
     & .swiper {
         width: 100%;
-        height: 80%;
+        padding: 2rem;
+    }
+
+    &__cards {
+        padding-bottom: 2rem;
     }
 
     &__card {
@@ -45,6 +49,16 @@
         overflow: hidden;
         border: 1px solid $surface-50;
         user-select: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            transform: scale(1.01);
+
+            & img {
+                transform: scale(1.08);
+            }
+        }
     }
 
     &__content {
@@ -52,16 +66,21 @@
         flex-direction: column;
         height: 100%;
 
+
+
     }
 
     &__image-container {
-        height: 35rem;
+        height: 25rem;
         object-fit: cover;
         overflow: hidden;
         border-bottom: 1px solid $surface-50;
 
         & img {
             width: 100%;
+            height: 100%;
+            transition: all 0.2s ease;
+
         }
     }
 
@@ -76,7 +95,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid $surface-50;
+        border-bottom: 2px solid $surface-50;
         padding-bottom: 2rem;
     }
 
@@ -91,7 +110,7 @@
         }
 
         & label {
-            padding: 0.8rem 1.6rem;
+            padding: 5px 8px;
             border-radius: 10rem;
             border: 1px solid $surface-300;
             font-size: 1.3rem;
@@ -104,13 +123,33 @@
         display: flex;
         flex-direction: column;
         align-self: stretch;
-        justify-content: space-around;
+        gap: 1rem;
         color: $surface-100;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
+    &__cutoff-text {
+        --max-lines: 3;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        line-clamp: var(--max-lines);
+        -webkit-line-clamp: var(--max-lines);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        padding-block: 2rem;
+        width: 95%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+
     & p {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         color: $surface-100;
     }
 
@@ -121,7 +160,7 @@
     }
 
     &__footer {
-        border-top: 1px solid $surface-100;
+        border-top: 2px solid $surface-50;
         padding-top: 2rem;
         display: flex;
         justify-content: space-between;
@@ -145,6 +184,19 @@
         font-size: 1.4rem;
         text-align: center;
 
+        &--repo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            & i {
+                color: $surface-0;
+                font-size: 2rem;
+                font-weight: 200;
+            }
+        }
+
         &:hover {
             transform: translateY(-3px);
         }
@@ -155,6 +207,7 @@
             color: $surface-300;
         }
     }
+
 
 
     & .swiper-pagination-bullet-active {

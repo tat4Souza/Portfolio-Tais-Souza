@@ -513,8 +513,10 @@ footer span {
   margin: 0 auto;
   align-self: center;
   display: flex;
+  align-items: center;
   min-height: 70vh;
   padding-inline: 2rem;
+  padding-bottom: 4rem;
 }
 .certificates__card {
   border: 1px solid #C3C5D9;
@@ -618,7 +620,10 @@ footer span {
 }
 .projects .swiper {
   width: 100%;
-  height: 80%;
+  padding: 2rem;
+}
+.projects__cards {
+  padding-bottom: 2rem;
 }
 .projects__card {
   height: 100%;
@@ -627,6 +632,14 @@ footer span {
   overflow: hidden;
   border: 1px solid #C3C5D9;
   user-select: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.projects__card:hover {
+  transform: scale(1.01);
+}
+.projects__card:hover img {
+  transform: scale(1.08);
 }
 .projects__content {
   display: flex;
@@ -634,13 +647,15 @@ footer span {
   height: 100%;
 }
 .projects__image-container {
-  height: 35rem;
+  height: 25rem;
   object-fit: cover;
   overflow: hidden;
   border-bottom: 1px solid #C3C5D9;
 }
 .projects__image-container img {
   width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
 }
 .projects__content-wrapper {
   display: flex;
@@ -652,7 +667,7 @@ footer span {
 .projects__header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #C3C5D9;
+  border-bottom: 2px solid #C3C5D9;
   padding-bottom: 2rem;
 }
 .projects__texts {
@@ -665,7 +680,7 @@ footer span {
   color: #26272A;
 }
 .projects__texts label {
-  padding: 0.8rem 1.6rem;
+  padding: 5px 8px;
   border-radius: 10rem;
   border: 1px solid #3C3C40;
   font-size: 1.3rem;
@@ -676,12 +691,29 @@ footer span {
   display: flex;
   flex-direction: column;
   align-self: stretch;
-  justify-content: space-around;
+  gap: 1rem;
   color: #A7AAC0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+.projects__cutoff-text {
+  --max-lines: 3;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  line-clamp: var(--max-lines);
+  -webkit-line-clamp: var(--max-lines);
+}
+.projects__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-block: 2rem;
+  width: 95%;
+  margin: 0 auto;
+  text-align: left;
 }
 .projects p {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #A7AAC0;
 }
 .projects i {
@@ -690,7 +722,7 @@ footer span {
   font-size: 1.6rem;
 }
 .projects__footer {
-  border-top: 1px solid #A7AAC0;
+  border-top: 2px solid #C3C5D9;
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -710,6 +742,17 @@ footer span {
   text-decoration: none;
   font-size: 1.4rem;
   text-align: center;
+}
+.projects__button--repo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.projects__button--repo i {
+  color: white;
+  font-size: 2rem;
+  font-weight: 200;
 }
 .projects__button:hover {
   transform: translateY(-3px);

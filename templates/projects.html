@@ -12,7 +12,7 @@
     <div class="swiper swiper-projects">
         <div class="projects__cards swiper-wrapper">
             {% for project in projects %}
-                <div class="projects__card swiper-slide">
+                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="projects__card swiper-slide">
                     <div class="projects__content">
                         <div class="projects__image-container">
                             <img src="{{url_for('static', filename=project.image)}}" alt="imagem">
@@ -29,19 +29,21 @@
                                     <span>{{project.period_end}}</span>
                                 </div>
                             </div>
-                            <p>{{project.desc}}</p>
-                            <i>Projeto {{project.type}}</i>
+                            <div class="projects__info">
+                                <p class="projects__cutoff-text">{{project.desc}}</p>
+                                <i>Projeto {{project.type}}</i>
+                            </div>
                             <div class="projects__footer">
                                 {% if project.link != "" %}
                                     <a href="{{project.link}}" target="#" class="projects__button--outline projects__button">Acessar o site</a>
                                 {% endif %}
-                                <a href="{{project.repository}}" target="#" class="projects__button">Abrir Repositório <i class='bx  bx-arrow-up-right-stroke'></i> </a>
+                                <a href="{{project.repository}}" target="#" class="projects__button projects__button--repo"> Github <i class='bx  bx-arrow-out-up-right-square'></i>   </a>
                             </div>
                         </div>
                         
 
                     </div>
-                </div>
+                </button>
             {% endfor %}
             <div class="swiper-slide">
             </div>
@@ -54,4 +56,19 @@
         <div class="swiper-button-next"></div>
     </div>
 </section>
+
+
+
+{% endblock %}
+
+{% block out_smooth_scroller %}
+<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header d-flex flex-row-reverse justify-content-between w-100">
+    <h1 class="offcanvas-title flex-grow-1 text-center" id="offcanvasRightLabel">Detalhes do Projeto</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div>
 {% endblock %}

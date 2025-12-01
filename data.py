@@ -116,7 +116,7 @@ projects_array = [
         "type": "Acadêmico",
         "image": "images/devloop-thumbnail.png",
         "desc": "O DevLOOP expõe de forma didática o funcionamento da metodologia SCRUM, formulários que permitem os membros de equipe DEV a relatar suas atividades, e relatórios para o gerenciamento e administração pelo responsável da equipe.",
-        "link": "",
+        "link": "qqq",
         "repository": "https://github.com/PigeonsCode/Equipe-PigeonCode.git"
     },
 
