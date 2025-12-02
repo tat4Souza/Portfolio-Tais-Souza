@@ -109,6 +109,7 @@ certificates_array = [
 
 projects_array = [
     {
+        "id": 1,
         "title": "DevLOOP - API",
         "status": "Concluído",
         "period_start": "Ago. 2025", 
@@ -116,22 +117,27 @@ projects_array = [
         "type": "Acadêmico",
         "image": "images/devloop-thumbnail.png",
         "desc": "O DevLOOP expõe de forma didática o funcionamento da metodologia SCRUM, formulários que permitem os membros de equipe DEV a relatar suas atividades, e relatórios para o gerenciamento e administração pelo responsável da equipe.",
-        "link": "qqq",
-        "repository": "https://github.com/PigeonsCode/Equipe-PigeonCode.git"
+        "full_desc": "O site foca no ensinamento da metodologia Scrum, com uma seção dedicada à explicações e exemplos sobre como usufruir da metodologia na prática; na avaliação do desempenho dos funcionários por meio de um formulário avaliativo e monitoramento da qualidade entregue pelos mesmos ao praticarem os processos do Scrum em seu dia a dia.",
+        "link": "",
+        "repository": "https://github.com/PigeonsCode/Equipe-PigeonCode.git",
+        "tech": ["Flask", "Python", "SQLite", "Bootstrap", "Chart.js"]
     },
 
     {
+        "id": 2,
         "title": "Interlink (TCC 3º ano)",
         "status": "Concluído",
         "period_start": "Fev. 2024", 
         "period_end": "Dez. 2024", 
         "type": "Acadêmico",
         "image": "images/interlink-thumbnail.jpeg",
-        "desc": "O Interlink é um website que, em sua proposta, auxilia na organização de processos seletivos em empresas e contribui na busca por vagas e na escolha de candidatos, funcionando de maneira semelhante a uma rede social.",
+        "desc": "O Interlink é um website que, em sua proposta, visa aprimorar a eficiência, transparência e personalização em cada etapa do processo seletivo, facilitando a tomada de decisões estratégicas. O site tem como objetivo redefinir a experiência de recrutamento, promovendo uma gestão mais ágil, precisa e adaptada às demandas do mercado. Por fim, o projeto também contribui na busca por vagas e na escolha de candidatos, funcionando de maneira semelhante a uma rede social.",
         "link": "",
-        "repository": "#"
+        "repository": "#",
+        "tech": ["JavaScript", "PHP", "SQL", "jQuery", "Google APIs", "Full Calendar API", "SweetAlert2", "Chart.js"]
     },
     {
+        "id": 3,
         "title": "Storia",
         "status": "Em Progresso",
         "period_start": "Ago. 2025", 
@@ -139,10 +145,13 @@ projects_array = [
         "type": "Pessoal",
         "image": "images/storia-thumbnail.png",
         "desc": "O objetivo do projeto é a criação de um site em que usuários poderão se cadastrar e ter acesso a uma ferramenta que facilite na organização de suas histórias e mundos fictícios.",
+        "full_desc": "No fim, o Storia será uma ferramenta na qual os usuários poderão cadastrar seus mundos e histórias e, a aplicação permitirá a edição das informações, criação de mapas personalizados e de 'elementos' que poderão ser reutilizáveis em todo projeto, como por exemplo: personagens, ambientes, religiões que se repetem ao longo da narrativa escrita no site.",
         "link": "",
-        "repository": "https://github.com/tat4Souza/Storia.git"
+        "repository": "https://github.com/tat4Souza/Storia.git",
+        "tech": ["React", "Next.js", "Sass", "TypeScript"]
     },
     {
+        "id": 4,
         "title": "Tatazzo Portfolio",
         "status": "Concluído",
         "period_start": "Mar. 2025", 
@@ -151,9 +160,11 @@ projects_array = [
         "image": "images/tatazzo-thumbnail.png",
         "desc": "Esse projeto foi um estudo para poder colocar em prática o que vi no curso da Udemy e poder assim, fixar melhor o conteúdo na cabeça, fazendo um design montado do zero. ",
         "link": "",
-        "repository": "https://github.com/tat4Souza/sass-training.git"
+        "repository": "https://github.com/tat4Souza/sass-training.git",
+        "tech": ["React", "Sass"]
     },
     {
+        "id": 5,
         "title": "Browser Extension",
         "status": "Concluído",
         "period_start": "Ago. 2025", 
@@ -161,21 +172,13 @@ projects_array = [
         "type": "Treino",
         "image": "images/browser-extension-thumbnail.png",
         "desc": "O projeto tem como objetivo o desenvolvimento de uma UI que permita a administração das extensões de navegador que estão ativas e inativas, possibilitando, também, a remoção de qualquer uma delas.",
+        "full_desc": "Projeto do Frontend Mentor no qual tive a oportunidade de praticar minha manipulação de arrays pelo React, bem como o uso da estilização condicional",
         "link": "",
-        "repository": "https://github.com/tat4Souza/Browser-extension-manager-UI_FrontEndMentor.git"
+        "repository": "https://github.com/tat4Souza/Browser-extension-manager-UI_FrontEndMentor.git",
+        "tech": ["React", "Framer Motion"]
     },
     {
-        "title": "Time Tracking",
-        "status": "Concluído",
-        "period_start": "Fev. 2025", 
-        "period_end": "Fev. 2025", 
-        "type": "Treino",
-        "image": "images/time-thumbnail.png",
-        "desc": "O objetivo do projeto é a prática do uso de CSS Grid e a amostragem das informações dinamicamente e a partir de um array de dados passados aos componentes.",
-        "link": "",
-        "repository": "#"
-    },
-    {
+        "id": 6,
         "title": "Contact Form",
         "status": "Concluído",
         "period_start": "Ago. 2025", 
@@ -183,7 +186,10 @@ projects_array = [
         "type": "Treino",
         "image": "images/contactUs-thumbnail.png",
         "desc": "O objetivo do projeto é a criação de um formulário funcional, acessível e responsivo, com validação de campos, mensagens de erros e confirmação visual de seu envio.",
+        "full_desc": "Projeto do Frontend Mentor no qual tive a oportunidade de praticar a criação de formulários com o React Hook Form, juntamente com a criação de inputs personalizados que mantivessem suas funcionalidades de acessibilidade.",
         "link": "",
-        "repository": "https://github.com/tat4Souza/Contact-Us_FrontEndMentor.git"
+        "repository": "https://github.com/tat4Souza/Contact-Us_FrontEndMentor.git",
+        "tech": ["React", "RHF", "Framer Motion"],
     }
 ]
+

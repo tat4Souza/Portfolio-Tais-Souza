@@ -33,13 +33,27 @@ gsap.fromTo('.education h2',
 );
 
 
-gsap.timeline({ defaults: { duration: 0.5 } })
-    .from('.education__course', {
-        opacity: 0,
-        left: -100,
+// gsap.to('.education__course', {
+//     duration: 0.5,
+//     opacity: 1,
+//     left: 0,
+//     stagger: 0.1,
+//     ease: 'power2.out',
+// });
+
+gsap.fromTo('.education__course',
+    // ESTADO INICIAL (FROM)
+    { opacity: 0, left: -100 },
+
+    // ESTADO FINAL (TO)
+    {
+        duration: 0.5,
+        opacity: 1,
+        left: 0,
         stagger: 0.1,
-        ease: 'power2.out',
-    });
+        ease: 'power2.out'
+    }
+);
 
 
 const boxes = gsap.utils.toArray('.education__course');

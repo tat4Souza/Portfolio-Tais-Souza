@@ -12,12 +12,17 @@
         gap: 2rem;
     }
 
+    & a {
+        text-decoration: none;
+    }
+
     & h2 {
         font-family: $bebasNeue;
         font-weight: 400;
         color: $secondary-color;
         font-size: 2rem;
     }
+
 }
 
 .intro {

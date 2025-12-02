@@ -27,8 +27,10 @@ const skills = gsap.utils.toArray('.skills-animation');
 skills.forEach(skill_content => {
     gsap.from(skill_content, {
         y: -200,
+        opacity: 0,
         scrollTrigger: {
             trigger: skill_content,
+            end: '-+20',
             scrub: true
         }
     })
@@ -36,8 +38,10 @@ skills.forEach(skill_content => {
 
 gsap.from('.skills-animation--2', {
     y: 300,
+    opacity: 0,
     scrollTrigger: {
         trigger: '.skills',
+        end: '-+30',
         scrub: true
     }
 })

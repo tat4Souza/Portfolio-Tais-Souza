@@ -9,7 +9,7 @@ def about():
 
 @app.route('/projetos')
 def projects():
-    return render_template('projects.html', projects = projects_array)
+    return render_template('projects.jinja2', projects = projects_array)
 
 @app.route('/formacao')
 def education():
