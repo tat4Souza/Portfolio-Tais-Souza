@@ -129,13 +129,37 @@
   
     }
         
-    
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from('.projects-intro__header h2', { duration: 1, y: -20 });
-    gsap.from('.projects-intro__header p', { duration: 1, y: -20 });
-    gsap.to('.projects-intro__header h2', { duration: 1, x: -100, opacity: 0, scrollTrigger: { trigger: 'projects-intro', scrub: true } });
-    gsap.to('.projects-intro__header p', { duration: 1, x: 100, opacity: 0, scrollTrigger: { trigger: 'projects-intro', scrub: true } });
+ScrollTrigger.matchMedia({
+    "(min-width: 500px)": function() {
+        
+        gsap.from('.projects-intro__header h2', { duration: 1, y: -20 });
+        
+        gsap.from('.projects-intro__header p', { duration: 1, y: -20 });
+        
+        gsap.to('.projects-intro__header h2', { 
+            duration: 1, 
+            x: -100, 
+            opacity: 0, 
+            scrollTrigger: { 
+                trigger: 'projects-intro', 
+                scrub: true 
+            } 
+        });
+        
+        gsap.to('.projects-intro__header p', { 
+            duration: 1, 
+            x: 100, 
+            opacity: 0, 
+            scrollTrigger: { 
+                trigger: 'projects-intro', 
+                scrub: true 
+            } 
+        });
+
+    }
+});
     
 
 
