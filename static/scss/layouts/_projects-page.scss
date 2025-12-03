@@ -3,6 +3,10 @@
     margin: 0 auto;
     margin-top: 10rem;
 
+    @include media(betweenTabPortLand) {
+        width: 90%;
+    }
+
     &__header {
         display: flex;
         justify-content: space-between;
@@ -24,6 +28,33 @@
             font-size: 2rem;
             color: $surface-300;
         }
+
+        @include media(tab-port) {
+            & h2 {
+                width: 45%;
+            }
+
+            & p {
+                font-size: 1.8rem;
+            }
+        }
+
+        @include media(phone) {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+            gap: 2rem;
+            text-align: center;
+
+            & h2 {
+                width: 100%;
+            }
+
+            & p {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -34,6 +65,10 @@
     margin-top: 5rem;
     display: flex;
     align-items: center;
+
+    @include media(betweenTabPortLand) {
+        width: 90%;
+    }
 
     & .swiper {
         width: 100%;
@@ -286,6 +321,14 @@
     &__header {
         color: $surface-300;
         border-bottom: 1px solid $surface-50;
+    }
+
+    @include media(betweenTabPortLand) {
+        width: 60% !important;
+    }
+
+    @include media(phone) {
+        width: 100% !important;
     }
 
 

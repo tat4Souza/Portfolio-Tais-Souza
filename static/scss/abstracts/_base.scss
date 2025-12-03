@@ -8,6 +8,17 @@
 
 html {
     font-size: 62.5%; //10px
+
+
+    @include media(tab-port) {
+        font-size: 50%; //8px
+    }
+
+    @include media(tab-land) {
+        font-size: 56.25%; //9px
+    }
+
+
 }
 
 body {

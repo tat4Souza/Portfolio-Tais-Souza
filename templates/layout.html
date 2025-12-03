@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="smooth-content">
-        <header class="header">
+        <header class="header {% if request.path == '/projetos' %} header__phonexs {% endif %}">
             <nav>
                 <ul>
                     <li><a class="button--nav {% if request.path == '/' %}active {% endif %}" href="{{url_for('about')}}">Sobre</a></li>
