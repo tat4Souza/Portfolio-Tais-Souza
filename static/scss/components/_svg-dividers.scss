@@ -4,6 +4,10 @@
     overflow: hidden;
     line-height: 0;
     margin-top: -2px;
+
+    @include media(phonexs) {
+        display: none;
+    }
 }
 
 .custom-shape-divider-top-1764256245 svg {
@@ -31,6 +35,10 @@
     width: calc(300% + 1.3px);
     height: 354px;
     bottom: 2px;
+
+    @include media(phonexs) {
+        display: none;
+    }
 }
 
 .custom-shape-divider-bottom-1764256323 .shape-fill {
@@ -46,6 +54,12 @@
     display: flex;
     justify-content: space-between;
 
+    @include media(phonexs) {
+        height: 90vh;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__stars {
         display: flex;
         flex-direction: column;
@@ -56,6 +70,10 @@
         transform: translate(-50%, -50%);
         top: 50%;
         opacity: 0.6;
+
+        @include media(phone) {
+            display: none;
+        }
 
         &--left {
             left: 4.5%;
@@ -113,12 +131,44 @@
             font-size: 3rem;
             margin-bottom: 5rem;
         }
+
+        @include media(tab-port) {
+            & h4 {
+                font-size: 4rem;
+            }
+
+            & h5 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @include media(phone) {
+            & h4 {
+                font-size: 4.5rem;
+            }
+        }
     }
 
     &__softwares-container {
         max-width: 60vw;
         overflow: hidden;
         position: relative;
+        display: flex;
+        align-items: flex-end;
+        height: max-content;
+
+        @include media(betweenTabPortLand) {
+            height: 20rem;
+            align-items: center;
+        }
+
+        @include media(tab-port) {
+            max-width: 75vw;
+        }
+
+        @include media(phone) {
+            max-width: 100vw;
+        }
 
         &::after {
             position: absolute;
@@ -147,6 +197,15 @@
         align-items: center;
         gap: 1.5rem;
         color: $text-light;
+
+        @include media(betweenTabPortLand) {
+            height: 10rem;
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 
     &__caption--blender {

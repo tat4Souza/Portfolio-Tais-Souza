@@ -18,6 +18,15 @@
     margin: 0 auto;
     // background-color: $surface-0;
 
+    @include media(betweenTabPortLand) {
+        width: 90%;
+    }
+
+    @include media(tab-port) {
+        width: 100%;
+    }
+
+
     &>h2 {
         font-size: 4rem;
         font-family: $poppins;
@@ -28,6 +37,23 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+    }
+
+    @include media(phone) {
+        align-items: center;
+
+        &>h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+    @include media(phonexs) {
+        padding: 2.5rem;
+        padding-top: 10rem;
+
+        &>h2 {
+            font-size: 3rem;
+        }
     }
 
     &__course {
@@ -45,6 +71,8 @@
         border: 1px solid $surface-50;
         cursor: pointer;
         transition: transform 0.2s ease;
+
+
 
 
         &::before,
@@ -83,6 +111,17 @@
             color: $surface-300;
 
         }
+
+        @include media(phone) {
+            flex-direction: column;
+            height: auto;
+
+
+            & svg {
+                display: none;
+
+            }
+        }
     }
 
     &__header {
@@ -97,11 +136,33 @@
             font-family: $bebasNeue;
             font-weight: 400;
             color: $surface-300;
+
+            @media (max-width: 68.75em) {
+                font-size: 3rem;
+            }
         }
 
         & span {
             font-size: 1.6rem;
             color: $surface-200;
+        }
+
+        @include media(tab-port) {
+            & h4 {
+                font-size: 3rem;
+            }
+        }
+
+        @include media(phone) {
+            width: 100%;
+            gap: 5px;
+            padding-left: 0;
+        }
+
+        @include media(phonexs) {
+            & h4 {
+                font-size: 3rem;
+            }
         }
     }
 
@@ -118,6 +179,19 @@
             font-size: 1.6rem;
         }
 
+        @include media(tab-port) {
+            p {
+                font-size: 1.7rem;
+            }
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        @include media(phone) {
+            width: 100%;
+        }
     }
 }
 
@@ -129,11 +203,24 @@
     flex-direction: column;
     gap: 4.5rem;
 
+    @include media(phonexs) {
+        width: 100%;
+        padding-inline: 0;
+    }
+
 
     & h2 {
         font-size: 4rem;
         color: $secondary-color;
         font-family: $poppins;
+    }
+
+    @include media(phone) {
+
+        &>h2 {
+            text-align: center;
+            font-size: 3.5rem;
+        }
     }
 
     &__container {
@@ -195,6 +282,10 @@
             font-family: $bebasNeue;
             font-weight: 400;
             padding-top: 2rem;
+
+            @include media(phone) {
+                font-size: 3rem;
+            }
 
         }
 

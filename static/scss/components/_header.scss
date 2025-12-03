@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
 
+
     & nav ul {
         display: flex;
         list-style: none;
@@ -23,6 +24,43 @@
         font-size: 2rem;
     }
 
+
+
+
+    @include media(betweenTabPortLand) {
+        width: 90%;
+    }
+
+    @include media(tab-port) {
+        width: 100%;
+        padding: 0 2rem;
+
+        & ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        & nav {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    @include media(phonexs) {
+        position: absolute;
+        z-index: 10;
+        justify-content: center;
+
+        & h2 {
+            display: none;
+        }
+
+        &__phonexs {
+            position: initial;
+        }
+    }
+
+
 }
 
 .intro {
@@ -31,11 +69,33 @@
     display: flex;
     align-items: center;
 
+    @include media(phone) {
+        height: 100vh;
+    }
+
+    @include media(phonexs) {
+        height: 120vh;
+        padding-bottom: 15rem;
+    }
+
 
     &__container {
         width: 70%;
         margin: 0 auto;
         display: flex;
+
+        @include media(betweenTabPortLand) {
+            width: 80%;
+        }
+
+        @include media(tab-port) {
+            width: 95%;
+        }
+
+        @include media(phone) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
 
@@ -48,6 +108,41 @@
             width: 60%;
             color: $surface-400;
         }
+
+        @include media(tab-port) {
+            width: 60%;
+
+            p {
+                width: 80%;
+            }
+
+            h2 {
+                font-size: 6.5rem !important;
+            }
+
+            h1 {
+                font-size: 5.5rem !important;
+            }
+        }
+
+        @include media(phone) {
+            margin-top: -8rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            & p {
+                text-align: center;
+            }
+        }
+
+        @include media(phonexs) {
+            & p {
+                width: 95%;
+            }
+        }
+
     }
 
     &__right-container {
@@ -62,8 +157,8 @@
         z-index: 0;
         border-bottom-left-radius: 100rem;
         border-bottom-right-radius: 100rem;
-
         display: flex;
+
 
         & img {
             position: absolute;
@@ -75,7 +170,62 @@
             object-fit: cover;
             filter: drop-shadow(8px 8px 10px #0000008b);
         }
+
+
+        @include media(betweenTabPortLand) {
+            left: 75%;
+            width: 35%;
+            z-index: 0;
+        }
+
+        @include media(tab-port) {
+            width: 40%;
+        }
+
+        @include media(phone) {
+            position: initial;
+            border-radius: 50%;
+            background: transparent;
+            transform: translateX(0);
+            overflow: visible;
+
+            align-items: center;
+            justify-content: center;
+        }
+
     }
+
+    @include media(phone) {
+        &__image-container {
+            width: 35rem;
+            height: 35rem;
+            background-image: linear-gradient(to bottom, #A273AF, rgba(0, 0, 0, 0));
+            overflow: hidden;
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            flex-grow: 0;
+
+
+            & img {
+                width: 100%;
+                height: 100%;
+                position: initial;
+                object-fit: cover;
+                aspect-ratio: 1/ 1;
+
+            }
+        }
+    }
+
+    @include media(phonexs) {
+        &__image-container {
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+
+
 
     &__texts {
         position: absolute;
@@ -85,6 +235,27 @@
         transform: translateX(-50%);
         left: 65%;
         width: 100%;
+
+        @include media(phone) {
+            left: 0;
+            transform: translateX(0);
+            display: flex;
+            position: initial;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+
+            & h1 {
+                margin-top: -1rem;
+            }
+        }
+
+        @include media(phonexs) {
+            & h1 {
+                margin-top: 1rem;
+            }
+        }
+
     }
 
     &__informal {
@@ -92,11 +263,19 @@
         font-style: normal;
         padding-top: 1rem;
         color: rgba($tertiary-color, 0.5);
+
+        @include media(phonexs) {
+            display: none;
+        }
     }
 
 
     &__header {
         margin-bottom: 8rem;
+
+        @include media(phone) {
+            margin-bottom: 2rem;
+        }
 
         & h2 {
             font-family: $poppins;
@@ -134,6 +313,24 @@
         flex-direction: column;
         gap: 1rem;
         z-index: 10;
+
+        @include media(phone) {
+            position: absolute;
+            bottom: 18%;
+            flex-direction: row;
+            font-size: 3rem;
+            margin: 0 auto;
+
+
+            & i {
+
+                color: $surface-300 !important;
+            }
+        }
+
+        @include media(phonexs) {
+            bottom: 22%;
+        }
     }
 
     &__item {
@@ -153,6 +350,10 @@
             overflow: hidden;
             transform: translateX(-10px);
             white-space: nowrap;
+
+            @include media(phone) {
+                color: $surface-300;
+            }
         }
 
 
@@ -175,6 +376,10 @@
         fill: $secondary-color;
         top: -6rem;
         left: -6rem;
+
+        @include media(tab-port) {
+            display: none;
+        }
     }
 
     &--2 {
@@ -182,6 +387,10 @@
         width: 7rem;
         bottom: 0;
         right: 7rem;
+
+        @include media(tab-port) {
+            display: none;
+        }
     }
 
     &--3 {
@@ -189,5 +398,13 @@
         width: 12rem;
         right: -1rem;
         bottom: -10rem;
+
+        @include media(tab-port) {
+            width: 10rem;
+            right: 4rem;
+            display: none;
+        }
     }
+
+
 }
