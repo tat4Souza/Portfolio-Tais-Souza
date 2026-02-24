@@ -84,6 +84,7 @@
             <h4 class="mb-4"> Sobre o Projeto </h4>
             <p class="offcanvas__desc"></p>
             <p class="offcanvas__full-desc"></p>
+            <small class="offcanvas__link--container">Acesse em: <a target="_blank" class="offcanvas__link--web"></a></small>
         </div>
         <div class="mb-4">
             <h4 class="mb-4"> Tecnologias utilizadas </h4>
@@ -109,6 +110,8 @@
     const offcanvasImagem = document.querySelector('.offcanvas__image');
     const offcanvasTecnologias = document.querySelector('.offcanvas__tec-container');
     const offcanvasRepo = document.querySelector('.offcanvas__link');
+    const offcanvasLinkWeb = document.querySelector('.offcanvas__link--web');
+    const offcanvasLinkContainer = document.querySelector('.offcanvas__link--container');
 
     const handleSelectedId = (id) => {
         let idSelecionado = id;
@@ -125,6 +128,13 @@
         offcanvasTecnologias.innerHTML = projetoSelecionado.tech.map(tec => `<label class="badge offcanvas__badge">${tec}</label>`).join('');
         offcanvasRepo.href = projetoSelecionado.repository;
         offcanvasDescricao.textContent = projetoSelecionado.full_desc;
+        offcanvasLinkWeb.textContent = projetoSelecionado.link;
+        offcanvasLinkWeb.href = projetoSelecionado.link;
+        if(projetoSelecionado.link === "") {
+            offcanvasLinkContainer.style.display = "none";
+        } else {
+            offcanvasLinkContainer.style.display = "block";
+        }
 
   
     }

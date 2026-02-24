@@ -1291,6 +1291,12 @@ footer span {
     width: 100% !important;
   }
 }
+.offcanvas__link--container {
+  color: #5e616c;
+}
+.offcanvas__link--web {
+  color: #5e616c;
+}
 .offcanvas__image-container {
   height: 35rem;
   overflow: hidden;

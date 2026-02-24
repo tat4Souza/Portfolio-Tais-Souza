@@ -16,4 +16,4 @@ def education():
     return render_template('education.html', data = courses_array, certificates = certificates_array)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

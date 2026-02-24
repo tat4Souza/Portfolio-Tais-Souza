@@ -1,7 +1,7 @@
 data_array = {
     "skills": {
         "idiom": "Inglês - Avançado",
-        "languages": ["Python", "JavaScript", "HTML", "CSS", "SCSS"],
+        "languages": ["Python", "JavaScript", "TypeScript", "HTML", "CSS", "SCSS"],
         "frameworks": ["Flask", "React.js"]
     }  
 }
@@ -110,6 +110,34 @@ certificates_array = [
 projects_array = [
     {
         "id": 1,
+        "title": "P.U.M.A",
+        "status": "Em Andamento",
+        "period_start": "Fev. 2026", 
+        "period_end": "Até o momento", 
+        "type": "Pessoal",
+        "image": "images/TelaMural1-desktop.png",
+        "desc": "O P.U.M.A é uma aplicação web Open-Source que procura unificar e servir o conteúdo escolar em apenas um só lugar. Buscando facilitar a vida do estudante com as matérias, horários, datas de provas/tarefas, e avisos de última hora. ",
+        "full_desc": "O projeto é pensado para suprir as necessidades dos alunos e surgiu como uma iniciativa própria em resposta à incertezas quanto a nova plataforma de ensino usada pela FATEC. Atuo como desenvolvedora Front-End juntamente com o meu colega de trabalho, Adler. Somos responsáveis por administrar os dados que entram na plataforma e pelo compromisso continuo de atualizá-la de acordo com o progresso do semestre letivo. ",
+        "link": "https://projetopuma.github.io/PUMA/",
+        "repository": "https://github.com/ProjetoPUMA/PUMA",
+        "tech": ["React", "TypeScript", "Sass", "PrimeFlex"]
+    },
+    {
+        "id": 2,
+        "title": "Vault 76",
+        "status": "Em Andamento",
+        "period_start": "Jan. 2026", 
+        "period_end": "Até o momento", 
+        "type": "Pessoal",
+        "image": "images/TelaHomePage_cta.png",
+        "desc": "O Vault-76 é um projeto independente focado em segurança e produtividade, desenvolvido por uma equipe de 3 pessoas. A plataforma atua como um gerenciador de credenciais, permitindo que equipes organizem dados sensíveis de forma eficiente e segura.",
+        "full_desc": "O projeto é pensado para prática de segurança de dados, fluxo de trabalho em equipe e desenvolvimento de uma aplicação web funcional. O Vault-76 é projetado para ser uma solução robusta para o armazenamento e gerenciamento de senhas, com foco na segurança e facilidade de uso. A plataforma inclui recursos como criptografia de dados, autenticação de dois fatores e uma interface intuitiva para facilitar a organização e acesso às credenciais armazenadas.",
+        "link": "",
+        "repository": "https://github.com/VitorBomfim-12/projeto_vault_senha",
+        "tech": ["React", "TypeScript", "Sass", "PrimeReact", "Flask", "Python", "SQLite", "API REST"]
+    },
+    {
+        "id": 3,
         "title": "DevLOOP - API",
         "status": "Concluído",
         "period_start": "Ago. 2025", 
@@ -124,7 +152,7 @@ projects_array = [
     },
 
     {
-        "id": 2,
+        "id": 4,
         "title": "Interlink (TCC 3º ano)",
         "status": "Concluído",
         "period_start": "Fev. 2024", 
@@ -137,21 +165,7 @@ projects_array = [
         "tech": ["JavaScript", "PHP", "SQL", "jQuery", "Google APIs", "Full Calendar API", "SweetAlert2", "Chart.js"]
     },
     {
-        "id": 3,
-        "title": "Storia",
-        "status": "Em Progresso",
-        "period_start": "Ago. 2025", 
-        "period_end": "Progresso", 
-        "type": "Pessoal",
-        "image": "images/storia-thumbnail.png",
-        "desc": "O objetivo do projeto é a criação de um site em que usuários poderão se cadastrar e ter acesso a uma ferramenta que facilite na organização de suas histórias e mundos fictícios.",
-        "full_desc": "No fim, o Storia será uma ferramenta na qual os usuários poderão cadastrar seus mundos e histórias e, a aplicação permitirá a edição das informações, criação de mapas personalizados e de 'elementos' que poderão ser reutilizáveis em todo projeto, como por exemplo: personagens, ambientes, religiões que se repetem ao longo da narrativa escrita no site.",
-        "link": "",
-        "repository": "https://github.com/tat4Souza/Storia.git",
-        "tech": ["React", "Next.js", "Sass", "TypeScript"]
-    },
-    {
-        "id": 4,
+        "id": 5,
         "title": "Tatazzo Portfolio",
         "status": "Concluído",
         "period_start": "Mar. 2025", 
@@ -163,33 +177,5 @@ projects_array = [
         "repository": "https://github.com/tat4Souza/sass-training.git",
         "tech": ["React", "Sass"]
     },
-    {
-        "id": 5,
-        "title": "Browser Extension",
-        "status": "Concluído",
-        "period_start": "Ago. 2025", 
-        "period_end": "Ago. 2025", 
-        "type": "Treino",
-        "image": "images/browser-extension-thumbnail.png",
-        "desc": "O projeto tem como objetivo o desenvolvimento de uma UI que permita a administração das extensões de navegador que estão ativas e inativas, possibilitando, também, a remoção de qualquer uma delas.",
-        "full_desc": "Projeto do Frontend Mentor no qual tive a oportunidade de praticar minha manipulação de arrays pelo React, bem como o uso da estilização condicional",
-        "link": "",
-        "repository": "https://github.com/tat4Souza/Browser-extension-manager-UI_FrontEndMentor.git",
-        "tech": ["React", "Framer Motion"]
-    },
-    {
-        "id": 6,
-        "title": "Contact Form",
-        "status": "Concluído",
-        "period_start": "Ago. 2025", 
-        "period_end": "Set. 2025", 
-        "type": "Treino",
-        "image": "images/contactUs-thumbnail.png",
-        "desc": "O objetivo do projeto é a criação de um formulário funcional, acessível e responsivo, com validação de campos, mensagens de erros e confirmação visual de seu envio.",
-        "full_desc": "Projeto do Frontend Mentor no qual tive a oportunidade de praticar a criação de formulários com o React Hook Form, juntamente com a criação de inputs personalizados que mantivessem suas funcionalidades de acessibilidade.",
-        "link": "",
-        "repository": "https://github.com/tat4Souza/Contact-Us_FrontEndMentor.git",
-        "tech": ["React", "RHF", "Framer Motion"],
-    }
 ]
 
